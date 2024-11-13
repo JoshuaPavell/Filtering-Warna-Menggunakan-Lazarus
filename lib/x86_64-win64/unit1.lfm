@@ -1,0 +1,308 @@
+object Form1: TForm1
+  Left = 297
+  Height = 749
+  Top = 98
+  Width = 1370
+  Caption = 'Form1'
+  ClientHeight = 749
+  ClientWidth = 1370
+  DesignTimePPI = 120
+  LCLVersion = '2.2.2.0'
+  object ScrollBox1: TScrollBox
+    Left = 8
+    Height = 600
+    Top = 248
+    Width = 600
+    HorzScrollBar.Page = 121
+    VertScrollBar.Page = 121
+    ClientHeight = 596
+    ClientWidth = 596
+    ParentFont = False
+    TabOrder = 0
+    OnClick = ScrollBox1Click
+    object ImageAsli: TImage
+      Left = 8
+      Height = 113
+      Top = 8
+      Width = 113
+      AutoSize = True
+    end
+  end
+  object ScrollBox2: TScrollBox
+    Left = 696
+    Height = 600
+    Top = 248
+    Width = 600
+    HorzScrollBar.Page = 128
+    VertScrollBar.Page = 120
+    ClientHeight = 596
+    ClientWidth = 596
+    ParentFont = False
+    TabOrder = 1
+    object ImageHasil: TImage
+      Left = 16
+      Height = 112
+      Top = 8
+      Width = 112
+      OnClick = ImageHasilClick
+    end
+  end
+  object Label1: TLabel
+    Left = 80
+    Height = 20
+    Top = 8
+    Width = 37
+    Caption = 'Menu'
+    ParentColor = False
+    ParentFont = False
+    OnClick = Label1Click
+  end
+  object Label2: TLabel
+    Left = 17
+    Height = 20
+    Top = 8
+    Width = 23
+    Caption = 'File'
+    ParentColor = False
+    ParentFont = False
+    OnClick = Label2Click
+  end
+  object BrightnessBar: TTrackBar
+    Left = 8
+    Height = 25
+    Top = 40
+    Width = 600
+    Max = 255
+    Min = -255
+    OnChange = BrightnessBarChange
+    Position = 0
+    ParentFont = False
+    TabOrder = 2
+    Visible = False
+  end
+  object BinerBar: TTrackBar
+    Left = 8
+    Height = 25
+    Top = 64
+    Width = 600
+    Max = 255
+    OnChange = BinerBarChange
+    Position = 127
+    ParentFont = False
+    TabOrder = 3
+    Visible = False
+  end
+  object ContrasBar: TTrackBar
+    Left = 8
+    Height = 25
+    Top = 88
+    Width = 600
+    Max = 255
+    OnChange = ContrasBarChange
+    Position = 128
+    ParentFont = False
+    TabOrder = 4
+    Visible = False
+  end
+  object GBar: TTrackBar
+    Left = 8
+    Height = 25
+    Top = 120
+    Width = 100
+    Max = 6
+    Min = 1
+    OnChange = GBarChange
+    Position = 1
+    ParentFont = False
+    TabOrder = 5
+    Visible = False
+  end
+  object LabelBrightness: TLabel
+    Left = 632
+    Height = 25
+    Top = 40
+    Width = 44
+    AutoSize = False
+    Caption = '0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object LabelBiner: TLabel
+    Left = 624
+    Height = 17
+    Top = 64
+    Width = 21
+    Caption = '127'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object LabelContras: TLabel
+    Left = 624
+    Height = 17
+    Top = 91
+    Width = 21
+    Caption = '127'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object LabelG: TLabel
+    Left = 624
+    Height = 17
+    Top = 112
+    Width = 24
+    Caption = 'G: 1'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object MenuKompleks: TLabel
+    Left = 159
+    Height = 20
+    Top = 8
+    Width = 92
+    Caption = 'Preprocessing'
+    ParentColor = False
+    ParentFont = False
+    OnClick = MenuKompleksClick
+  end
+  object BrightnessButton: TButton
+    Left = 664
+    Height = 25
+    Top = 40
+    Width = 90
+    Caption = 'Proses'
+    OnClick = BrightnessButtonClick
+    ParentFont = False
+    TabOrder = 6
+    Visible = False
+  end
+  object BinerButton: TButton
+    Left = 664
+    Height = 25
+    Top = 72
+    Width = 90
+    Caption = 'Proses'
+    OnClick = BinerButtonClick
+    ParentFont = False
+    TabOrder = 7
+    Visible = False
+  end
+  object ContrasButton: TButton
+    Left = 664
+    Height = 25
+    Top = 104
+    Width = 90
+    Caption = 'Proses'
+    OnClick = ContrasButtonClick
+    ParentFont = False
+    TabOrder = 8
+    Visible = False
+  end
+  object Filter: TLabel
+    Left = 296
+    Height = 20
+    Top = 8
+    Width = 54
+    Caption = 'Filtering'
+    ParentColor = False
+    ParentFont = False
+    OnClick = FilterClick
+  end
+  object Memo1: TMemo
+    Left = 696
+    Height = 64
+    Top = 168
+    Width = 188
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 9
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    Left = 43
+    Top = 890
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 938
+    Top = 58
+    object Gray: TMenuItem
+      Caption = 'Gray'
+      OnClick = GrayClick
+    end
+    object Proses: TMenuItem
+      Caption = 'Proses'
+      OnClick = ProsesClick
+    end
+  end
+  object PopupMenu2: TPopupMenu
+    Left = 994
+    Top = 58
+    object Open: TMenuItem
+      Caption = 'Open'
+      OnClick = OpenClick
+    end
+    object Save: TMenuItem
+      Caption = 'Save'
+      OnClick = SaveClick
+    end
+    object Quit: TMenuItem
+      Caption = 'Quit'
+      OnClick = QuitClick
+    end
+  end
+  object SavePictureDialog1: TSavePictureDialog
+    Left = 83
+    Top = 890
+  end
+  object PopupMenu3: TPopupMenu
+    Left = 1050
+    Top = 58
+    object Brightness: TMenuItem
+      Caption = 'Brightness'
+      OnClick = BrightnessClick
+    end
+    object Biner: TMenuItem
+      Caption = 'Biner'
+      OnClick = BinerClick
+    end
+    object Contras: TMenuItem
+      Caption = 'Contras'
+      OnClick = ContrasClick
+    end
+  end
+  object PopupMenu4: TPopupMenu
+    Left = 890
+    Top = 58
+    object HPF0: TMenuItem
+      Caption = 'HPF0'
+      OnClick = HPF0Click
+    end
+    object HPF1: TMenuItem
+      Caption = 'HPF1'
+      OnClick = HPF1Click
+    end
+    object LPF: TMenuItem
+      Caption = 'LPF'
+      OnClick = LPFClick
+    end
+  end
+end
